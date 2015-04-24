@@ -46,6 +46,13 @@ class simpleapp_tk(Tkinter.Tk):
         button = Tkinter.Button(self,text=u"Get " + self.ogidVar.get() + " Structure",command=self.OnOGFetchClick).grid(column=0,row=3)
         self.OGlabelVar = Tkinter.StringVar()
         self.OGlabel = Tkinter.Message(self,textvariable=self.OGlabelVar,width=200).grid(column=0,row=4,columnspan=4,sticky='EW')
+        # NAV FRAME
+        self.buttonframe = Tkinter.Frame(self)
+        self.buttonframe.grid(column=1,row=3,sticky='w')
+        # BUTTON UP
+        self.up = Tkinter.Button(self.buttonframe,text=u"UP").grid(column=0,row=0,sticky='w')
+        #BUTTON DOWN
+        self.down = Tkinter.Button(self.buttonframe,text=u"DOWN").grid(column=1,row=0,sticky='w')
         #self.labelVar = Tkinter.StringVar()
         #label = Tkinter.Label(self,textvariable=self.labelVar,anchor="w",fg="white",bg="blue")
         #label.grid(column=0,row=1,columnspan=2,sticky='EW')
